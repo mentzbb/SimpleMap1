@@ -79,15 +79,15 @@ private class SimpleMap1_Test
         Map<Integer, String> combiMap=sm.combineMaps(testMap, testMap2);
 
         System.assertEquals('One', combiMap.get(1), 'Element with index 1 should be \'One\'');
-        System.assertEquals('Two', combiMap.get(1), 'Element with index 2 should be \'Two\'');
-        System.assertEquals('Three', combiMap.get(1), 'Element with index 3 should be \'Three\'');
-        System.assertEquals('Four', combiMap.get(1), 'Element with index 4 should be \'Four\'');
-        System.assertEquals('Five', combiMap.get(1), 'Element with index 5 should be \'Five\'');
-        System.assertEquals('Six', combiMap.get(1), 'Element with index 6 should be \'Six\'');
-        System.assertEquals('Seven', combiMap.get(1), 'Element with index 7 should be \'Seven\'');
-        System.assertEquals('Eight', combiMap.get(1), 'Element with index 8 should be \'Eight\'');
-        System.assertEquals('Nine', combiMap.get(1), 'Element with index 9 should be \'Nine\'');
-        System.assertEquals('Ten', combiMap.get(1), 'Element with index 10 should be \'Ten\'');
+        System.assertEquals('Two', combiMap.get(2), 'Element with index 2 should be \'Two\'');
+        System.assertEquals('Three', combiMap.get(3), 'Element with index 3 should be \'Three\'');
+        System.assertEquals('Four', combiMap.get(4), 'Element with index 4 should be \'Four\'');
+        System.assertEquals('Five', combiMap.get(5), 'Element with index 5 should be \'Five\'');
+        System.assertEquals('Six', combiMap.get(6), 'Element with index 6 should be \'Six\'');
+        System.assertEquals('Seven', combiMap.get(7), 'Element with index 7 should be \'Seven\'');
+        System.assertEquals('Eight', combiMap.get(8), 'Element with index 8 should be \'Eight\'');
+        System.assertEquals('Nine', combiMap.get(9), 'Element with index 9 should be \'Nine\'');
+        System.assertEquals('Ten', combiMap.get(10), 'Element with index 10 should be \'Ten\'');
         System.assertEquals(10, combiMap.size(), 'Size of combined maps should be 10');
     }
 
