@@ -51,7 +51,7 @@ private class SimpleMap1_Test
                                                 'Should return true as key 10 is in map');
         System.assertEquals(true, sm.containsKeys(testMap, new List<Integer>{30, 25, 20, 15, 10}), 
                                                 'Should return true as all keys in map');
-        System.assertEquals(true, sm.containsKeys(testMap, new List<Integer>{30, 20, 35, 15, 25, 10}), 
+        System.assertEquals(false, sm.containsKeys(testMap, new List<Integer>{30, 20, 35, 15, 25, 10}), 
                                                 'Should return false as key 35 not in map');
     }
         
@@ -156,7 +156,7 @@ private class SimpleMap1_Test
         };
 
         sm.removeIfValueMatches(testMap, 5, 'Five');
-        System.assertEquals('Seven', testMap.get(5), 'Value for key 5 should be unchanged');
+        System.assertEquals('Five', testMap.get(5), 'Value for key 5 should be unchanged');
 
         sm.removeIfValueMatches(testMap, 64, 'sixty four');
         System.assertEquals('Sixty four', testMap.get(64), 'Value for key 64 should be unchanged as case doesn\'t match');
