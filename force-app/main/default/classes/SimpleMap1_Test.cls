@@ -155,7 +155,7 @@ private class SimpleMap1_Test
             64=>'Sixty four'
         };
 
-        sm.removeIfValueMatches(testMap, 5, 'Five');
+        sm.removeIfValueMatches(testMap, 5, 'Seven');
         System.assertEquals('Five', testMap.get(5), 'Value for key 5 should be unchanged');
 
         sm.removeIfValueMatches(testMap, 64, 'sixty four');
