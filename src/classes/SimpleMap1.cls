@@ -15,8 +15,6 @@ public with sharing class SimpleMap1
         // change this method to add 'value' indexed by 'key' to the 
         // supplied 'inMap' ONLY if an entry with the key of 'key' is
         // not present in the map already.
-
-        return null;
     }    
     
     public Boolean containsKeys(Map<Integer, String> inMap, List<Integer> keys)

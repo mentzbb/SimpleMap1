@@ -45,13 +45,13 @@ private class SimpleMap1_Test
             30=>'Thirty'
         };
 
-        System.assertEquals(false, sm.containsKeys(inMap, new List<String>{30, 15, 556}), 
+        System.assertEquals(false, sm.containsKeys(testMap, new List<Integer>{30, 15, 556}), 
                                                 'Should not return true as key 556 is not in map');
-        System.assertEquals(true, sm.containsKeys(inMap, new List<String>{10}), 
+        System.assertEquals(true, sm.containsKeys(testMap, new List<Integer>{10}), 
                                                 'Should return true as key 10 is in map');
-        System.assertEquals(true, sm.containsKeys(inMap, new List<String>{30, 25, 20, 15, 10}), 
+        System.assertEquals(true, sm.containsKeys(testMap, new List<Integer>{30, 25, 20, 15, 10}), 
                                                 'Should return true as all keys in map');
-        System.assertEquals(true, sm.containsKeys(inMap, new List<String>{30, 20, 35, 15, 25, 10}), 
+        System.assertEquals(true, sm.containsKeys(testMap, new List<Integer>{30, 20, 35, 15, 25, 10}), 
                                                 'Should return false as key 35 not in map');
     }
         
@@ -78,17 +78,17 @@ private class SimpleMap1_Test
 
         Map<Integer, String> combiMap=sm.combineMaps(testMap, testMap2);
 
-        System.assertEquals('One', labelMap.get(1), 'Element with index 1 should be \'One\'');
-        System.assertEquals('Two', labelMap.get(1), 'Element with index 2 should be \'Two\'');
-        System.assertEquals('Three', labelMap.get(1), 'Element with index 3 should be \'Three\'');
-        System.assertEquals('Four', labelMap.get(1), 'Element with index 4 should be \'Four\'');
-        System.assertEquals('Five', labelMap.get(1), 'Element with index 5 should be \'Five\'');
-        System.assertEquals('Six', labelMap.get(1), 'Element with index 6 should be \'Six\'');
-        System.assertEquals('Seven', labelMap.get(1), 'Element with index 7 should be \'Seven\'');
-        System.assertEquals('Eight', labelMap.get(1), 'Element with index 8 should be \'Eight\'');
-        System.assertEquals('Nine', labelMap.get(1), 'Element with index 9 should be \'Nine\'');
-        System.assertEquals('Ten', labelMap.get(1), 'Element with index 10 should be \'Ten\'');
-        System.assertEquals(10, labelMap.size(), 'Size of combined maps should be 10');
+        System.assertEquals('One', combiMap.get(1), 'Element with index 1 should be \'One\'');
+        System.assertEquals('Two', combiMap.get(1), 'Element with index 2 should be \'Two\'');
+        System.assertEquals('Three', combiMap.get(1), 'Element with index 3 should be \'Three\'');
+        System.assertEquals('Four', combiMap.get(1), 'Element with index 4 should be \'Four\'');
+        System.assertEquals('Five', combiMap.get(1), 'Element with index 5 should be \'Five\'');
+        System.assertEquals('Six', combiMap.get(1), 'Element with index 6 should be \'Six\'');
+        System.assertEquals('Seven', combiMap.get(1), 'Element with index 7 should be \'Seven\'');
+        System.assertEquals('Eight', combiMap.get(1), 'Element with index 8 should be \'Eight\'');
+        System.assertEquals('Nine', combiMap.get(1), 'Element with index 9 should be \'Nine\'');
+        System.assertEquals('Ten', combiMap.get(1), 'Element with index 10 should be \'Ten\'');
+        System.assertEquals(10, combiMap.size(), 'Size of combined maps should be 10');
     }
 
     @isTest 
@@ -103,7 +103,7 @@ private class SimpleMap1_Test
             'Dos'=>'Two'
         };
 
-        System.assertEquals(4, sm.getSize(), 'Map size should be 4');
+        System.assertEquals(4, sm.getSize(testMap), 'Map size should be 4');
     }
 
     @isTest 
@@ -120,10 +120,10 @@ private class SimpleMap1_Test
             'Last'=>40
         };
 
-        System.assertEquals(100, sm.getMaxValue(), 'Max value should be 100');
+        System.assertEquals(100, sm.getMaxValue(testMap), 'Max value should be 100');
 
         testMap.put('Third', 200);
-        System.assertEquals(200, sm.getMaxValue(), 'Max value should be 200');
+        System.assertEquals(200, sm.getMaxValue(testMap), 'Max value should be 200');
     }
 
     @isTest 
@@ -139,11 +139,11 @@ private class SimpleMap1_Test
             64=>'Sixty four'
         };
 
-        System.assertEquals(83, sm.getKeyTotal(), 'Total of keys should be 64');
+        System.assertEquals(83, sm.getKeyTotal(testMap), 'Total of keys should be 64');
     }
 
     @isTest 
-    static void getKeyTotalTest()
+    static void removeIfValueMatchesTest()
     {
         SimpleMap1 sm=new SimpleMap1();
 
