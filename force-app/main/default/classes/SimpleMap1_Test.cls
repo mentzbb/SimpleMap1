@@ -139,7 +139,7 @@ private class SimpleMap1_Test
             64=>'Sixty four'
         };
 
-        System.assertEquals(83, sm.getKeyTotal(testMap), 'Total of keys should be 64');
+        System.assertEquals(83, sm.getKeyTotal(testMap), 'Total of keys should be 83');
     }
 
     @isTest 
