@@ -43,7 +43,7 @@ public with sharing class SimpleMap1
 
     public Integer getMaxValue(Map<String, Integer> inMap)
     {
-        // change this method to return the key of the largest value stored
+        // change this method to return the largest value stored
         // in the supplied 'inMap'
 
         return null;
