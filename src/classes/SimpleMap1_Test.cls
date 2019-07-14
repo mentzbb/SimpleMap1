@@ -127,6 +127,40 @@ private class SimpleMap1_Test
     }
 
     @isTest 
+    static void getMaxValueSomeNegativeTest()
+    {
+        SimpleMap1 sm=new SimpleMap1();
+
+        Map<String, Integer> testMap=new Map<String, Integer>{
+            'First'=>-20,
+            'Second'=>2,
+            'Third'=>-17,
+            'Fourth'=>12,
+            'Fifth'=>19,
+            'Last'=>-40
+        };
+
+        System.assertEquals(19, sm.getMaxValue(testMap), 'Max value should be 19');
+    }
+
+    @isTest 
+    static void getMaxValueAllNegativeTest()
+    {
+        SimpleMap1 sm=new SimpleMap1();
+
+        Map<String, Integer> testMap=new Map<String, Integer>{
+            'First'=>-20,
+            'Second'=>-2,
+            'Third'=>-17,
+            'Fourth'=>-12,
+            'Fifth'=>-19,
+            'Last'=>-40
+        };
+
+        System.assertEquals(-2, sm.getMaxValue(testMap), 'Max value should be -2');
+    }
+
+    @isTest 
     static void getKeyTotalTest()
     {
         SimpleMap1 sm=new SimpleMap1();
