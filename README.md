@@ -1,8 +1,3 @@
-#DRAFT CHALLENGE
-This challenge is not yet live - you can start work on it, but please be aware that it may change
-underneath you. You won't be able to request mentoring or submit your solution until the challenge
-is live
-
 # Simple Map 1 Mentz Challenge
 
 ## About
